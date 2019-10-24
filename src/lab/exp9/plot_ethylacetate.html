@@ -1,10 +1,7 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
-<html> 
- <head> 
+<!DOCTYPE html><html><head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
     <title>Graph Plot</title> 
-    <link href="layout.css" rel="stylesheet" type="text/css"></link> 
+    <link href="layout.css" rel="stylesheet" type="text/css"> 
     <!--[if IE]><script language="javascript" type="text/javascript" src="../excanvas.min.js"></script><![endif]--> 
     <script language="javascript" type="text/javascript" src="jquery.js"></script> 
     <script language="javascript" type="text/javascript" src="jquery.flot.js"></script> 
@@ -12,16 +9,19 @@
     <body> 
  
    <table>
-   <tr>
+   <tbody><tr>
    <td>
     <div id="placeholder" style="width:800px;height:500px"></div>  
     </td>
     <td>
      <p id="hoverdata">Mouse hovers at
-     (<span id="x">0</span>, <span id="y">0</span> ). </p> 
+     ( --&gt; error!!!<span id="x">0</span>,  --&gt; error!!!<span id="y">0</span> ).  --&gt; error!!!</p> 
     </td>
     </tr>
-   <table>
+   </tbody></table><br><br><hr><div id="Calc">
+
+ <form name="Calc"></form>
+</div><table>
  <!--   <p>A tooltip is easy to build with a bit of jQuery code and the
     data returned from the plot.</p> 
  
@@ -236,46 +236,43 @@ var plot = $.plot($("#placeholder"),
 });
 </script> 
 
-<br/>
-<br/>
-<hr/>
-<div id="Calc" >
 
- <FORM NAME="Calc">
-<TABLE BORDER=4>
-<TR>
-<TD>
-<INPUT TYPE="text"   NAME="Input" Size="16">
+
+
+</table><table border="4">
+<tbody><tr>
+<td>
+<input type="text" name="Input" size="16">
 <br>
-</TD>
-</TR>
-<TR>
-<TD>
-<INPUT TYPE="button" NAME="one"   VALUE="  1  " OnClick="Calc.Input.value += '1'">
-<INPUT TYPE="button" NAME="two"   VALUE="  2  " OnCLick="Calc.Input.value += '2'">
-<INPUT TYPE="button" NAME="three" VALUE="  3  " OnClick="Calc.Input.value += '3'">
-<INPUT TYPE="button" NAME="plus"  VALUE="  +  " OnClick="Calc.Input.value += ' + '">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" name="one" value="  1  " onclick="Calc.Input.value += '1'">
+<input type="button" name="two" value="  2  " onclick="Calc.Input.value += '2'">
+<input type="button" name="three" value="  3  " onclick="Calc.Input.value += '3'">
+<input type="button" name="plus" value="  +  " onclick="Calc.Input.value += ' + '">
 <br>
-<INPUT TYPE="button" NAME="four"  VALUE="  4  " OnClick="Calc.Input.value += '4'">
-<INPUT TYPE="button" NAME="five"  VALUE="  5  " OnCLick="Calc.Input.value += '5'">
-<INPUT TYPE="button" NAME="six"   VALUE="  6  " OnClick="Calc.Input.value += '6'">
-<INPUT TYPE="button" NAME="minus" VALUE="  -  " OnClick="Calc.Input.value += ' - '">
+<input type="button" name="four" value="  4  " onclick="Calc.Input.value += '4'">
+<input type="button" name="five" value="  5  " onclick="Calc.Input.value += '5'">
+<input type="button" name="six" value="  6  " onclick="Calc.Input.value += '6'">
+<input type="button" name="minus" value="  -  " onclick="Calc.Input.value += ' - '">
 <br>
-<INPUT TYPE="button" NAME="seven" VALUE="  7  " OnClick="Calc.Input.value += '7'">
-<INPUT TYPE="button" NAME="eight" VALUE="  8  " OnCLick="Calc.Input.value += '8'">
-<INPUT TYPE="button" NAME="nine"  VALUE="  9  " OnClick="Calc.Input.value += '9'">
-<INPUT TYPE="button" NAME="times" VALUE="  x  " OnClick="Calc.Input.value += ' * '">
+<input type="button" name="seven" value="  7  " onclick="Calc.Input.value += '7'">
+<input type="button" name="eight" value="  8  " onclick="Calc.Input.value += '8'">
+<input type="button" name="nine" value="  9  " onclick="Calc.Input.value += '9'">
+<input type="button" name="times" value="  x  " onclick="Calc.Input.value += ' * '">
 <br>
-<INPUT TYPE="button" NAME="clear" VALUE="  c  " OnClick="Calc.Input.value = ''">
-<INPUT TYPE="button" NAME="zero"  VALUE="  0  " OnClick="Calc.Input.value += '0'">
-<INPUT TYPE="button" NAME="DoIt"  VALUE="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
-<INPUT TYPE="button" NAME="div"   VALUE="  /  " OnClick="Calc.Input.value += ' / '">
+<input type="button" name="clear" value="  c  " onclick="Calc.Input.value = ''">
+<input type="button" name="zero" value="  0  " onclick="Calc.Input.value += '0'">
+<input type="button" name="DoIt" value="  =  " onclick="Calc.Input.value = eval(Calc.Input.value)">
+<input type="button" name="div" value="  /  " onclick="Calc.Input.value += ' / '">
 <br>
-</TD>
-</TR>
-</TABLE>
-</FORM>
-</div> 
+</td>
+</tr>
+</tbody></table>
+
+ 
 <script>
 function checkAns(vary,varz,soln)
 {
@@ -289,22 +286,21 @@ function checkAns(vary,varz,soln)
   $(varz).append('<td><img src="wrong.gif"></td>');  
  }
 }
-</script>
-<br/>
-<br/>
+ --> error!!!</script>
+<br>
+<br>
 <div id="QuesAns">
- <table id="Ques1" border=0>
- <tr>
-  <td>
-  Q1.What is the capital of India ? 
-  </td>
+ <table id="Ques1" border="0">
+ <tbody><tr>
+  <td>Q1. భారతదేశ రాజధాని ఏమిటి?</td>
  </tr>
  <tr id="qans1">
-  <td> Ans: <input type="text" id="ans1"/></td>
-  <td> <input type="button" value="Submit Answer" OnClick="checkAns('ans1','#qans1','Delhi');" /></td>
+  <td>జ:<input type="text" id="ans1"></td>
+  <td> <input type="button" value="Submit Answer" onclick="checkAns('ans1','#qans1','Delhi');"></td>
  </tr> 
- <table>
- </div>
-</div>
- </body> 
-</html> 
+ </tbody></table><table>
+ 
+
+  
+ 
+</table></div></body></html>
